@@ -18,7 +18,8 @@ public class Logic1
     /// cigarParty(70, true) → true
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
-    {
+
+    {  // mēģinu īsāko koda pieraksta veidu
           if (cigars < 40) return false;               // ja cigāri ir mazāk kā 40 tad atgriežam false,ballīte nav izdevusies
           if (cigars <= 60 || isWeekend) return true;  // Ja cigāri ir mazāk vai vienā skaitā, kā 60 vai ir brīvdiena, tad atgriežam true
         return false;                                  // Citos gadījumos atgriežam false, jo tas nozīmē, ka ir vairāk, kā 60 cigāri 
@@ -38,8 +39,9 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
 
-    {
-        // ja tu vai(or) cilvēku uz satikšanos skaits ir mazāks vai vienāds ar 2, tad atbilde ir 0(no)
+    {     // mēģinu īsāko koda pieraksta veidu
+
+          // ja tu vai(or) cilvēku uz satikšanos skaits ir mazāks vai vienāds ar 2, tad atbilde ir 0(no)
            if (you <= 2 || date <= 2) return 0;
         // ja tu vai(or) cilvēku uz satikšanos skaits ir lielāks vai vienāds ar 8, tad atbilde ir 2(yes)
            if (you >= 8 || date >= 8) return 2;
@@ -58,7 +60,9 @@ public class Logic1
     /// squirrelPlay(95, true) → true
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
-    {
+
+    {       // mēģinu īsāko koda pieraksta veidu
+
             // piedefinējam mainīgā augšējo robežu un uzstādam sākotnējo vērtību 90
         int tempUpperLimit = 90;
             // Ja ir vasara, tad temperatūras augšējo robežu uzstādam vērtību 100
@@ -81,9 +85,11 @@ public class Logic1
     /// caughtSpeeding(65, true) → 0
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
-    {
-        // Ja ir dzimšanas diena, tad samazinām pieņemto ātrumu par 5
-           if (isBirthday) speed -= 5;
+
+    {    // mēģinu īsāko koda pieraksta veidu
+
+         // Ja ir dzimšanas diena, tad samazinām pieņemto ātrumu par 5
+        if (isBirthday) speed -= 5;
         // Ja ātrums ir mazāks vai vienāds ar 60, tad nav sods / atgriežam vērtību 0;
            if (speed <= 60) return 0;
         // Ja ātrums ir lielāks vai vienāds ar 81 tad sods ir liels / atgriežam vērtību 2    
@@ -152,7 +158,6 @@ public class Logic1
         }
 
         // Pēc iepriekšējās pārbaudes tagad zinam, ka ir darba diena
-
         // Ja ir atvaļinājums un ir darba diena
         // Tad liekam modinātāju vēlu
         if (vacation)
