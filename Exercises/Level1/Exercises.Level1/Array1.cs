@@ -106,17 +106,17 @@ public class Array1
     public int Sum3(int[] nums)
     {
         
-        int sum = 0;       // Izveidojam mainīgo sum, kurā glabāsim skaitļu summu
+        int summa = 0;       // Izveidojam mainīgo summa, kurā glabāsim skaitļu summu
 
         
         foreach (int num in nums)  /*   Ejam cauri katram nums masīva elementam un 
                                       pieskaitām katru masīva nums elementu mainīgajam sum     */
   
         {
-             sum += num;
+             summa += num;
         }
   
-        return sum;      // Atgriežam summas rezultātu
+        return summa;      // Atgriežam summas rezultātu
 
     }
 
