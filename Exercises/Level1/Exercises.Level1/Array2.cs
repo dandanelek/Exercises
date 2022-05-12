@@ -17,7 +17,17 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+
+ // Mēs varam pārbaudīt, vai skaitlis ir pāra vai nepāra, ņemot mod 2 un pārbaudot atlikumu
+        int count = 0;             // seko pāra elementu skaitam
+          for (int i = 0; i < nums.Length; i = i + 1)
+          {
+            if (nums[i] % 2 == 0)  // ja elements indeksā i ir pāra
+            {
+                count = count + 1;
+            }
+          }
+            return count;
     }
 
     /// <summary>
@@ -229,8 +239,25 @@ public class Array2
     /// has77([1, 7, 1, 1, 7]) → false
     /// </summary>
     public bool Has77(int[] nums)
-    {
-        throw new NotImplementedException();
+    {   // 0 1 2 3 4 
+        // 3,4,5,6,7
+        // atgriežu true ja mums ir 7,7 vai 7, x, 7
+        // i  i + 1
+        // 7,7
+        // i  i + 2
+        // 7, x, 7
+        for (int i = 0; i < nums.Length; i = i + 1)
+        {
+            if (i < nums.Length - 1 && nums[i] == 7 && nums[i + 1] == 7)
+            {
+                return true;
+            }
+            if (i < nums.Length - 2 && nums[i] == 7 && nums[i + 2] == 7)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
@@ -243,7 +270,19 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
-        throw new NotImplementedException();
+        Boolean hasOne = false;
+        for (int i = 0; i < nums.Length; i = i + 1)
+        {
+            if (nums[i] == 1)
+            {
+                hasOne = true;
+            }
+            if (nums[i] == 2 && hasOne == true)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
